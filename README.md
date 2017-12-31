@@ -16,3 +16,7 @@ This repository was created with:
 rails new load -M -C --skip-spring --skip-listen --skip-turbolinks
 ```
 
+Generated a resource with:
+```
+rails g resource prisoner name:string rank:string serial_number:string --no-helper --no-javascripts --no-stylesheets
+```

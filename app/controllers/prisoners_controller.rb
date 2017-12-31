@@ -1,0 +1,2 @@
+class PrisonersController < ApplicationController
+end
