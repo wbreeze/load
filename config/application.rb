@@ -19,6 +19,7 @@ Bundler.require(*Rails.groups)
 module Load
   class Application < Rails::Application
     config.autoload_paths += Dir["#{config.root}/lib/"]
+    config.eager_load_paths += Dir["#{config.root}/lib/"]
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
