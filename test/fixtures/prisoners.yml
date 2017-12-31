@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  rank: MyString
-  serial_number: MyString
+  name: George Harrison
+  rank: Rock Star
+  serial_number: 784A2161
 
 two:
-  name: MyString
-  rank: MyString
-  serial_number: MyString
+  name: Peter Piper
+  rank: Storybook Character
+  serial_number: 337B2484
