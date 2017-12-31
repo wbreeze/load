@@ -2,8 +2,8 @@
 
 Trying to reproduce:
 ```
-F, [2017-12-20T18:59:11.748783 #25193] FATAL -- : [5a1b7d98-b7ed-4268-b577-0531e2ccb360] NameError (uninitialized constant #<Class:0x0055a1368249c0>::Chimp):
-F, [2017-12-20T18:59:11.748851 #25193] FATAL -- : [5a1b7d98-b7ed-4268-b577-0531e2ccb360] app/models/advocate/self_code.rb:7:in `add_to_mailchimp'
+F, [] FATAL -- : [] NameError (uninitialized constant #<Class:0x0055a1368249c0>::Chimp):
+F, [] FATAL -- : [] app/models/advocate/self_code.rb:7:in `add_to_mailchimp'
 
   6   def add_to_mailchimp
   7     list = Chimp::List.new(Chimp::Settings.list_id('amigos'))
@@ -41,7 +41,7 @@ In the Rails 5.0 generated application you'll find directories, `assets` and `ta
 
 Here's a second fix that made everything simple.
 
-Instead of putting my "`chimp`" directory in "`lib`", I made a directory in `app` called "`services`" (`app/services`). Then I moved the `chimp` directory from `lib` to `app/services` (`app/services/chimp`) and deleted the two configuration lines from `config/application.rb`.
+Instead of putting my "`role_api`" directory in "`lib`", I made a directory in `app` called "`services`" (`app/services`). Then I moved the `role_api` directory from `lib` to `app/services` (`app/services/role_api`) and deleted the two configuration lines from `config/application.rb`.
 
 Running the tests still worked, and then I reverted the `config.eager_load` change I had made in `config/environments/test.rb`.
 
